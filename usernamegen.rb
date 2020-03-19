@@ -32,6 +32,7 @@ class Username
 
   def print_username
     puts "\nYour username is #{@adj1}#{@adj2}#{@profession}"
+    File.open("username_logger.txt", "a") { |file| file.puts "#{@adj1}#{@adj2}#{@profession}\n"}
   end
 
 end
